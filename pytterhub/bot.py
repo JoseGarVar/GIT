@@ -104,7 +104,7 @@ def send_alerts_by_dm(calendar, twitter):
 	for k,v in calendar.items():
 		if k == date:
 			if v.has_key(time):
-				twitter.SendDM(TWITTER_SETTINGS['bot'], v[time])
+				twitter.SendDM(TWITTER_SETTINGS['bot'], v[time])#se puede Agragar mas Texto
 				print "Mensaje directo enviado"
 
 def main():
@@ -114,4 +114,4 @@ def main():
 	send_alerts_by_dm(calendar, twitter)
 
 if __name__ == "__main__":
-	main()
+	main() #solo se ejecuta cuando es como programa, cuando se importa no!
